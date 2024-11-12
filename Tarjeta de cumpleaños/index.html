@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Cumpleaños</title>
+    <style>
+        /* Fondo, tarjeta y estilos básicos */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ff0000;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+            position: relative;
+            z-index: 1;
+        }
+        .title {
+            font-size: 24px;
+            color: #800080;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+        }
+        .moving-gif {
+            width: 100px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+<audio autoplay loop>
+    <source src="nombre_de_la_musica.mp3" type="audio/mp3">
+</audio>
+
+<div class="card">
+    <div class="title">¡Feliz Cumple!</div>
+    <img src="nombre_del_gif.gif" alt="imagen gif" class="moving-gif">
+    <div class="message">Espero que tengas un día increíble lleno de amor y alegría. ¡Eres muy especial!</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Cumpleaños</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ff0000; /* Fondo rojo */
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Evita el scroll */
+        }
+
+        /* Tarjeta */
+        .card {
+            background-color: #ffffff; /* Fondo blanco para la tarjeta */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+            position: relative;
+            z-index: 1; /* Pone la tarjeta encima de las palabras en movimiento */
+        }
+
+        /* Título de la tarjeta */
+        .title {
+            font-size: 24px;
+            color: #800080; /* Texto violeta */
+            margin-bottom: 20px;
+        }
+
+        /* Mensaje dentro de la tarjeta */
+        .message {
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        /* Palabras que se mueven en fila */
+        .moving-text-container {
+            position: absolute;
+            top: 50%; /* Centra verticalmente */
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .moving-text {
+            font-size: 20px;
+            color: #ff1493;
+            display: inline-block;
+            animation: moveText 10s linear infinite;
+        }
+
+        @keyframes moveText {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Contenedor para las palabras que se mueven -->
+<div class="moving-text-container">
+    <div class="moving-text">Te Amo Te Amo Te Amo Te Amo Te Amo Te Amo Te Amo Te Amo Te Amo</div>
+</div>
+
+<!-- Tarjeta de cumpleaños -->
+<div class="card">
+    <div class="title">¡Feliz Cumple!</div>
+    <div class="message">Espero que tengas un día increíble lleno de amor y alegría. ¡Eres muy especial!</div>
+</div>
+
+</body>
+</html>
